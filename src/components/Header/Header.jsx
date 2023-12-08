@@ -24,7 +24,6 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   }, []);
-  // code for scroll effect end
 
   return (
     <header className={`main-header  ${scrolled ? "sticky-header" : ""}`}>

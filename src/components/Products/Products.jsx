@@ -1,6 +1,14 @@
 import "./Products.scss";
+import Product from "./Product/Product";
 const Products = () => {
-    return <div>Products</div>;
+  return (
+    <>
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+    </>
+  );
 };
 
 export default Products;

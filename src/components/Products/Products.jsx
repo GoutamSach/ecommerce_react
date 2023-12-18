@@ -1,12 +1,15 @@
 import "./Products.scss";
 import Product from "./Product/Product";
-const Products = () => {
+const Products = ({ heading }) => {
   return (
     <>
-      <Product />
-      <Product />
-      <Product />
-      <Product />
+      <div className="products-container">
+        <div className="sec-heading">{heading}</div>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+      </div>
     </>
   );
 };

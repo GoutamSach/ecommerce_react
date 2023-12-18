@@ -1,4 +1,4 @@
-import Category from "../Category/Category";
+import Category from "../Home/Category/Category";
 import Products from "../Products/Products";
 import Banner from "./Banner/Banner";
 import "./Home.scss";
@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Banner />
       <Category />
-      <Products />
+      <Products heading="Popular Products" />
     </>
   );
 };

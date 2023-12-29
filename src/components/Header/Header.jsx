@@ -4,11 +4,12 @@ import { AiOutlineHeart } from "react-icons/ai";
 import "./Header.scss";
 import Cart from "../Cart/Cart";
 import { useEffect, useState } from "react";
+import Search from "./Search/Search";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showCart, setshowCart] = useState(false);
-  const [searchModal, setSearchModal] = useState(false);
+  const [showSearch, setshowSearch] = useState(false);
 
   // code for scroll effect
   const handleScroll = () => {
@@ -34,15 +35,16 @@ const Header = () => {
           </ul>
           <div className="center">Ecommerce</div>
           <div className="right">
-            <TbSearch />
+            <TbSearch onClick={() => setshowSearch(true)} />
             <AiOutlineHeart />
-            <span className="cart-icon">
+            <span onClick={() => setshowCart(true)} className="cart-icon">
               <CgShoppingCart /> <span>5</span>
             </span>
           </div>
         </div>
       </header>
-      {showCart && <Cart />}
+      {showCart && <Cart setshowCart={setshowCart} />}
+      {showSearch && <Search setshowSearch={setshowSearch} />}
     </>
   );
 };

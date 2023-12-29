@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdClose } from "react-icons/md";
 import { BsCartX } from "react-icons/bs";
 import CartItem from "./CartItem/CartItem";
 import "./Cart.scss";
 
-const Cart = () => {
+const Cart = ({ setshowCart }) => {
   return (
     <div className="cart-panel">
       <div className="opac-layer"></div>
       <div className="cart-content">
         <div className="cart-header">
           <span className="heading">Shopping Cart</span>
-          <span className="close-btn">
+          <span onClick={() => setshowCart(false)} className="close-btn">
             <MdClose className="close-btn" />
-            <span className="text">close</span>
+            <span onClick={() => setshowCart(false)} className="text">
+              close
+            </span>
           </span>
         </div>
 

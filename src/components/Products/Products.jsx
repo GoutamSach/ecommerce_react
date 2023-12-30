@@ -1,6 +1,6 @@
 import "./Products.scss";
 import Product from "./Product/Product";
-const Products = ({ heading, products }) => {
+const Products = ({ display, heading, products }) => {
   return (
     <>
       <div className="products-container">

@@ -17,6 +17,9 @@
     @include md {
       height: 350px;
     }
+    @include sm2 {
+      height: 350px;
+    }
     img {
       transition: all ease 0.3s;
       display: block;

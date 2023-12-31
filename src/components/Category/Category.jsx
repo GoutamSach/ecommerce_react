@@ -14,8 +14,8 @@ const Category = () => {
     getproducts();
   }, []);
 
-  function getproducts() {
-    dataFromApi(
+  async function getproducts() {
+    await dataFromApi(
       `/api/products?populate=*&[filters][categories][id]=${id}`
     ).then((res) => {
       console.log(res);

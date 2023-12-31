@@ -7,7 +7,12 @@ const AppContext = ({ children }) => {
   const [products, setproducts] = useState();
   return (
     <Context.Provider
-      value={{ categories, setCategories, products, setproducts }}
+      value={{
+        categories,
+        setCategories,
+        products,
+        setproducts,
+      }}
     >
       {children}
     </Context.Provider>
